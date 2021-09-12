@@ -8,6 +8,8 @@ from spotipy.oauth2 import SpotifyOAuth
 """
 
 #variables you need to change :
+#targetPlaylistID : ID of the playlist you're modifying 
+#sourcePlaylistID : ID of the playlist you're getting the tracks from
 targetPlaylistID = "4XsBp3Qs72nKP2zrugOf3P"
 sourcePlaylistID = "37i9dQZF1DWVY4eLfA3XFQ"
 
@@ -15,7 +17,7 @@ sourcePlaylistID = "37i9dQZF1DWVY4eLfA3XFQ"
 scope = "playlist-modify-private"
 
 #authentication
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='ab7a88c5e09a4a358989d4967fe5d315',scope=scope,redirect_uri="http://127.0.0.1:9090"))
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope,redirect_uri="http://127.0.0.1:9090"))
 
 #(play)list of information on tracks 
 targetPlaylist = []
