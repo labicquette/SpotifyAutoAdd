@@ -52,6 +52,7 @@ for item in sourcePlaylist :
             break
     if not duplicate :
         originalTracks.append(item['track']['id'])
+        print(item['track']['name'])
 
 #addition to user playlist if there are new tracks 
 if len(originalTracks) > 0 :
